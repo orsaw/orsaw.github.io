@@ -1,7 +1,8 @@
-body{font-family: 'Cormorant Garamond', serif;}
+body{font-family: "Gloock", serif;}
 
 header{ 
- font-size: 98px;
+ font-weight: 800;
+ font-size: 60;
  } 
 
 font{padding: 30px;}
