@@ -3,5 +3,5 @@ container: document.getElementById('anim'),
 rederer: 'svg',
 loop: true,
 autoplay: true;
-path: 'data.json'
+path: 'orsaw.github.io/data.json'
 })
