@@ -149,22 +149,6 @@ main {
           flex-direction: column;
 }
 
-.logo {
-  width: 64px;
-  height: 64px;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-}
-.logo.active img {
-  -webkit-animation-name: logo;
-          animation-name: logo;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
 }
 
 .container {
@@ -176,17 +160,17 @@ main {
   overflow: hidden;
   background-color: inherit;
   border-radius: 10px;
-  border: 3px solid rgba(38, 143, 255, 0.19);
+  border: 1px solid rgba(38, 143, 255, 0.19);
   position: relative;
 }
 .glass::before {
   position: absolute;
   content: "";
   background: inherit;
-  left: -10px;
-  right: -10px;
-  top: -10px;
-  bottom: -10px;
+  left: -5px;
+  right: -5px;
+  top: -5px;
+  bottom: -5px;
   -webkit-box-shadow: inset 0 0 0 3000px rgba(38, 143, 255, 0.19);
           box-shadow: inset 0 0 0 3000px rgba(38, 143, 255, 0.19);
   -webkit-filter: blur(10px);
