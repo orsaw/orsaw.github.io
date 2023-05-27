@@ -1,48 +1,42 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/tab-icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" type="text/javascript"></script>
-    <title>Audio player</title>
+  <title>Web Player</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrapper">
-    <div class="content">
-      <div class="song">
-        <div class="song__cover">
-          <img src="song-cover.jpg" alt="Song Cover">
-        </div>
-        <div class="song__author">Artist Name</div>
-        <div class="song__title">Song Title</div>
-      </div>
-      <div class="player">
-        <div class="player__slide-container">
-          <input type="range" min="0" max="100" value="50" class="player__slider">
-          <div class="player__duration">0:00 / 3:30</div>
-        </div>
-        <button><img src="previous-button.png" alt="Previous Button"></button>
-        <button><img src="play-button.png" alt="Play Button"></button>
-        <button><img src="next-button.png" alt="Next Button"></button>
-      </div>
-      <div class="navigation">
-        <button><img src="shuffle-button.png" alt="Shuffle Button"></button>
-        <div class="navigation__slider-container">
-          <div class="navigation__progress-bar"></div>
-          <input type="range" min="0" max="100" value="50" class="navigation__slider">
-        </div>
-        <div class="navigation__time">2:30</div>
-      </div>
+  <div class="player-container">
+    <h1 class="title">Web Player</h1>
+    
+    <div class="controls">
+      <input type="file" id="music-file" multiple>
+      <button onclick="uploadMusic()">Upload</button>
+      <button onclick="deleteMusic()">Delete</button>
     </div>
-    <div class="footer">
-      <p>© 2023 Music Player. All rights reserved.</p>
-      <p>Created by <a href="https://your-website.com">Uli</a></p>
+    
+    <div class="equalizer">
+      <h2>Equalizer</h2>
+      <input type="range" id="eq-range" min="0" max="100" step="1" value="50" oninput="adjustEqualizer(this.value)">
+    </div>
+    
+    <div class="volume-control">
+      <h2>Volume</h2>
+      <input type="range" id="volume-range" min="0" max="100" step="1" value="50" oninput="adjustVolume(this.value)">
+    </div>
+    
+    <div class="radio-stations">
+      <h2>Radio Stations</h2>
+      <input type="radio" name="radio" value="station1" onchange="playRadioStation(this.value)"> Station 1
+      <input type="radio" name="radio" value="station2" onchange="playRadioStation(this.value)"> Station 2
+      <input type="radio" name="radio" value="station3" onchange="playRadioStation(this.value)"> Station 3
+    </div>
+    
+    <div id="playlist" class="playlist">
+      <h2>Playlist</h2>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
