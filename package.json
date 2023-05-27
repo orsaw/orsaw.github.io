@@ -1,0 +1,16 @@
+{
+  "name": "audio-player",
+  "version": "1.0.0",
+  "description": "Home Work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ilya Filatov",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "web-audio-api": "^0.2.2",
+    "webpack": "^5.82.1"
+  }
+}
