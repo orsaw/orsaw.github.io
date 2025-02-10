@@ -33,6 +33,14 @@ header {
 }
 
 
+.Description2 {
+  position: absolute;
+  top: 17%;
+  left: 520px;
+}
+
+
+
 .Button1 {
   position: absolute;
   top: 45%;
